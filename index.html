@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fathih Akbar — AI Engineer Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+    }
+
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
+      border-bottom: 1px solid #21262d;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #58a6ff, #7c3aed);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 40px;
+      margin: 0 auto 20px;
+    }
+
+    header h1 { font-size: 2.2rem; margin-bottom: 8px; }
+    header p.tagline {
+      color: #8b949e;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .badge {
+      background: #21262d;
+      border: 1px solid #30363d;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      color: #8b949e;
+    }
+
+    .social-links { margin-top: 20px; display: flex; gap: 16px; justify-content: center; }
+    .social-links a {
+      background: #21262d;
+      border: 1px solid #30363d;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #e6edf3;
+      transition: background 0.2s;
+    }
+    .social-links a:hover { background: #30363d; text-decoration: none; }
+
+    /* ── Main ── */
+    main { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+    section { margin-bottom: 60px; }
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #21262d;
+      color: #e6edf3;
+    }
+
+    /* ── About ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .about-card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .about-card h3 { font-size: 14px; color: #8b949e; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill-tag {
+      background: #1f2937;
+      border: 1px solid #374151;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      color: #93c5fd;
+    }
+
+    /* ── Projects ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      padding: 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .project-card:hover {
+      border-color: #58a6ff;
+      transform: translateY(-2px);
+    }
+
+    .project-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
+    .project-icon { font-size: 28px; }
+    .project-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+    .project-tier {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+    .tier-1 { background: #1e1b4b; color: #a5b4fc; }
+    .tier-2 { background: #022c22; color: #6ee7b7; }
+    .tier-3 { background: #1c1917; color: #d6d3d1; }
+
+    .project-desc { color: #8b949e; font-size: 14px; margin-bottom: 16px; line-height: 1.6; }
+
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .tech {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #8b949e;
+    }
+
+    .project-links { display: flex; gap: 10px; }
+    .btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      border: 1px solid #30363d;
+      color: #e6edf3;
+      background: #21262d;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #30363d; text-decoration: none; }
+    .btn-primary { background: #1f6feb; border-color: #1f6feb; }
+    .btn-primary:hover { background: #388bfd; }
+
+    /* ── Stats ── */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stat-card {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .stat-number { font-size: 2rem; font-weight: 700; color: #58a6ff; }
+    .stat-label { color: #8b949e; font-size: 14px; margin-top: 4px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid #21262d;
+      padding: 30px 20px;
+      text-align: center;
+      color: #8b949e;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      header h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <div class="avatar">🤖</div>
+  <h1>Fathih Akbar</h1>
+  <p class="tagline">AI Engineer · LLM · NLP · MLOps</p>
+  <div class="badges">
+    <span class="badge">🎓 Fresh Graduate</span>
+    <span class="badge">📍 Indonesia</span>
+    <span class="badge">💼 Open to Work</span>
+  </div>
+  <div class="social-links">
+    <a href="https://github.com/FathihAkbar" target="_blank">🐙 GitHub</a>
+    <a href="https://linkedin.com/in/USERNAME" target="_blank">💼 LinkedIn</a>
+    <a href="mailto:email@gmail.com">📧 Email</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── Stats ── -->
+  <section>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">7</div>
+        <div class="stat-label">Proyek Selesai</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">88%</div>
+        <div class="stat-label">Accuracy Fine-tuning</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">0.87</div>
+        <div class="stat-label">RAG Eval Score</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">7/7</div>
+        <div class="stat-label">CI/CD Tests Passed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section>
+    <h2>👋 Tentang Saya</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>🛠️ Tech Stack</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">HuggingFace</span>
+          <span class="skill-tag">Gemini API</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">ChromaDB</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">Streamlit</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Pydantic</span>
+          <span class="skill-tag">Plotly</span>
+        </div>
+      </div>
+      <div class="about-card">
+        <h3>🎯 Fokus Area</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">LLM / GenAI</span>
+          <span class="skill-tag">RAG Systems</span>
+          <span class="skill-tag">NLP Bahasa Indonesia</span>
+          <span class="skill-tag">Fine-tuning</span>
+          <span class="skill-tag">MLOps</span>
+          <span class="skill-tag">AI Agents</span>
+          <span class="skill-tag">LLM Evaluation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section>
+    <h2>🚀 Proyek</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">🤖</div>
+          <div>
+            <div class="project-title">RAG Document Q&A</div>
+            <span class="project-tier tier-1">Tier 1 — Wajib</span>
+          </div>
+        </div>
+        <p class="project-desc">Sistem tanya jawab dokumen end-to-end menggunakan RAG pipeline. Upload PDF → tanya dalam Bahasa Indonesia → dapat jawaban + sumber halaman. Dievaluasi dengan LLM-as-Judge (overall score: 0.727).</p>
+        <div class="tech-stack">
+          <span class="tech">LangChain</span>
+          <span class="tech">ChromaDB</span>
+          <span class="tech">Gemini</span>
+          <span class="tech">FastAPI</span>
+          <span class="tech">HuggingFace</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/rag-document-qa" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">🧠</div>
+          <div>
+            <div class="project-title">IndoBERT Sentiment Fine-tuning</div>
+            <span class="project-tier tier-1">Tier 1 — Wajib</span>
+          </div>
+        </div>
+        <p class="project-desc">Fine-tuning IndoBERT untuk sentiment analysis Bahasa Indonesia menggunakan LoRA — hanya 0.24% parameter dilatih. Accuracy 88.2%, F1 0.830 pada test set.</p>
+        <div class="tech-stack">
+          <span class="tech">HuggingFace</span>
+          <span class="tech">LoRA/PEFT</span>
+          <span class="tech">IndoBERT</span>
+          <span class="tech">PyTorch</span>
+          <span class="tech">W&B</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/indobert-sentiment-finetuning" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">⚙️</div>
+          <div>
+            <div class="project-title">ML CI/CD Pipeline</div>
+            <span class="project-tier tier-2">Tier 2 — Pembeda</span>
+          </div>
+        </div>
+        <p class="project-desc">REST API sentiment analysis dengan automated testing dan CI/CD pipeline. Setiap push ke GitHub otomatis menjalankan 7 unit tests sebelum deploy. 7/7 tests passed.</p>
+        <div class="tech-stack">
+          <span class="tech">FastAPI</span>
+          <span class="tech">Docker</span>
+          <span class="tech">GitHub Actions</span>
+          <span class="tech">Pytest</span>
+          <span class="tech">DistilBERT</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/ml-cicd-pipeline" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">📊</div>
+          <div>
+            <div class="project-title">NLP Dashboard Sosmed Indonesia</div>
+            <span class="project-tier tier-2">Tier 2 — Pembeda</span>
+          </div>
+        </div>
+        <p class="project-desc">Dashboard interaktif analisis sentimen & topik dari Google Play Store reviews (Gojek, Tokopedia, Shopee). Word cloud, trend chart, LDA topic modeling.</p>
+        <div class="tech-stack">
+          <span class="tech">Streamlit</span>
+          <span class="tech">DistilBERT</span>
+          <span class="tech">LDA</span>
+          <span class="tech">Plotly</span>
+          <span class="tech">WordCloud</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/nlp-dashboard" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">🕵️</div>
+          <div>
+            <div class="project-title">Data Analysis Agent</div>
+            <span class="project-tier tier-2">Tier 2 — Pembeda</span>
+          </div>
+        </div>
+        <p class="project-desc">AI Agent berbasis ReAct pattern yang menganalisis file CSV secara otomatis. Agent memilih sendiri dari 8 tools yang tepat tanpa diarahkan step by step.</p>
+        <div class="tech-stack">
+          <span class="tech">LangChain</span>
+          <span class="tech">Gemini</span>
+          <span class="tech">Tool Calling</span>
+          <span class="tech">FastAPI</span>
+          <span class="tech">Pandas</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/ai-agent" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">📄</div>
+          <div>
+            <div class="project-title">Structured Output Extraction</div>
+            <span class="project-tier tier-3">Tier 3 — Bonus</span>
+          </div>
+        </div>
+        <p class="project-desc">Ekstrak data terstruktur dari invoice, kontrak, dan form pendaftaran menggunakan Gemini + Pydantic validation. Support input teks maupun file PDF.</p>
+        <div class="tech-stack">
+          <span class="tech">Gemini</span>
+          <span class="tech">Pydantic</span>
+          <span class="tech">FastAPI</span>
+          <span class="tech">PyMuPDF</span>
+          <span class="tech">LangChain</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/structured-extraction" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">🔬</div>
+          <div>
+            <div class="project-title">LLM Evaluation Dashboard</div>
+            <span class="project-tier tier-3">Tier 3 — Bonus</span>
+          </div>
+        </div>
+        <p class="project-desc">Dashboard interaktif untuk membandingkan performa berbagai prompt menggunakan LLM-as-Judge. Visualisasi radar chart, bar chart, dan detail per pertanyaan.</p>
+        <div class="tech-stack">
+          <span class="tech">Streamlit</span>
+          <span class="tech">Gemini</span>
+          <span class="tech">Plotly</span>
+          <span class="tech">LangChain</span>
+          <span class="tech">Pandas</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/llm-eval-dashboard" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Built with ❤️ by Fathih Akbar · 2024</p>
+  <p style="margin-top:8px"><a href="https://github.com/FathihAkbar">github.com/FathihAkbar</a></p>
+</footer>
+
+</body>
+</html>
