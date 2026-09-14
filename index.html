@@ -34,7 +34,7 @@
     section { margin-bottom: 60px; }
     section h2 { font-size: 1.5rem; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #21262d; }
 
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 800px; margin: 0 auto; }
     .stat-card { background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 24px; text-align: center; }
     .stat-number { font-size: 2rem; font-weight: 700; color: #58a6ff; }
     .stat-label { color: #8b949e; font-size: 14px; margin-top: 4px; }
@@ -85,51 +85,41 @@
 <body>
 
 <header>
-  <div class="avatar">🤖</div>
+  <img 
+  src="https://github.com/FathihAkbar.png" 
+  alt="Fathih Akbar"
+  style="width:100px; height:100px; border-radius:50%; margin: 0 auto 20px; display:block; border: 3px solid #58a6ff;"
+/>
   <h1>Fathih Akbar</h1>
-  <p class="tagline">AI Engineer · Data Scientist · LLM · NLP · MLOps</p>
+  <p class="tagline">Data Analyst · Data Scientist · AI Engineer · LLM · NLP · MLOps</p>
   <div class="badges">
-    <span class="badge">🎓 Fresh Graduate</span>
-    <span class="badge">📍 Indonesia</span>
-    <span class="badge">💼 Open to Work</span>
+    <span class="badge">Fresh Graduate</span>
+    <span class="badge">Indonesia</span>
+    <span class="badge">Open to Work</span>
   </div>
   <div class="social-links">
-    <a href="https://github.com/FathihAkbar" target="_blank">🐙 GitHub</a>
-    <a href="https://linkedin.com/in/USERNAME" target="_blank">💼 LinkedIn</a>
-    <a href="mailto:email@gmail.com">📧 Email</a>
+    <a href="https://github.com/FathihAkbar" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/fathih-akbar-farabhi-3a0104364/" target="_blank">LinkedIn</a>
+    <a href="mailto:fathihakbfrb77@gmail.com">Email</a>
   </div>
 </header>
 
 <main>
 
   <!-- Stats -->
-  <section>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-number">11+</div>
-        <div class="stat-label">Total Proyek</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">88%</div>
-        <div class="stat-label">Accuracy Fine-tuning</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">0.87</div>
-        <div class="stat-label">RAG Eval Score</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">7/7</div>
-        <div class="stat-label">CI/CD Tests Passed</div>
-      </div>
-    </div>
-  </section>
+  <section style="display: flex; justify-content: center;">
+  <div class="stat-card" style="min-width: 200px;">
+    <div class="stat-number">30</div>
+    <div class="stat-label">Total Projects</div>
+  </div>
+</section>
 
   <!-- About -->
   <section>
-    <h2>👋 Tentang Saya</h2>
+    <h2>About Me</h2>
     <div class="about-grid">
       <div class="about-card">
-        <h3>🛠️ Tech Stack</h3>
+        <h3>Tech Stack</h3>
         <div class="skill-tags">
           <span class="skill-tag">LangChain</span>
           <span class="skill-tag">HuggingFace</span>
@@ -146,7 +136,7 @@
         </div>
       </div>
       <div class="about-card">
-        <h3>🎯 Fokus Area</h3>
+        <h3>Area Focus</h3>
         <div class="skill-tags">
           <span class="skill-tag">LLM / GenAI</span>
           <span class="skill-tag">RAG Systems</span>
@@ -155,6 +145,7 @@
           <span class="skill-tag">MLOps</span>
           <span class="skill-tag">AI Agents</span>
           <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">Data Scientist</span>
           <span class="skill-tag">LLM Evaluation</span>
         </div>
       </div>
@@ -163,15 +154,15 @@
 
   <!-- Projects -->
   <section>
-    <h2>🚀 Proyek</h2>
+    <h2>Projects</h2>
 
     <!-- AI Engineer -->
-    <div class="section-label">🤖 AI Engineer Projects</div>
+    <div class="section-label">AI Engineer Projects</div>
     <div class="projects-grid">
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">🤖</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">RAG Document Q&A</div>
             <span class="project-tier tier-1">Tier 1 — Wajib</span>
@@ -186,13 +177,13 @@
           <span class="tech">HuggingFace</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/rag-document-qa" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/rag-document-qa" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">🧠</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">IndoBERT Sentiment Fine-tuning</div>
             <span class="project-tier tier-1">Tier 1 — Wajib</span>
@@ -206,13 +197,13 @@
           <span class="tech">PyTorch</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/indobert-sentiment-finetuning" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/indobert-sentiment-finetuning" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">⚙️</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">ML CI/CD Pipeline</div>
             <span class="project-tier tier-2">Tier 2 — Pembeda</span>
@@ -226,13 +217,13 @@
           <span class="tech">Pytest</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/ml-cicd-pipeline" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/ml-cicd-pipeline" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">📊</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">NLP Dashboard Sosmed Indonesia</div>
             <span class="project-tier tier-2">Tier 2 — Pembeda</span>
@@ -246,13 +237,13 @@
           <span class="tech">Plotly</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/nlp-dashboard" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/nlp-dashboard" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">🕵️</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">Data Analysis Agent</div>
             <span class="project-tier tier-2">Tier 2 — Pembeda</span>
@@ -266,13 +257,13 @@
           <span class="tech">FastAPI</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/ai-agent" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/ai-agent" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">📄</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">Structured Output Extraction</div>
             <span class="project-tier tier-3">Tier 3 — Bonus</span>
@@ -286,13 +277,13 @@
           <span class="tech">PyMuPDF</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/structured-extraction" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/structured-extraction" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">🔬</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">LLM Evaluation Dashboard</div>
             <span class="project-tier tier-3">Tier 3 — Bonus</span>
@@ -306,19 +297,19 @@
           <span class="tech">LangChain</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/llm-eval-dashboard" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/llm-eval-dashboard" target="_blank">GitHub</a>
         </div>
       </div>
 
     </div>
 
     <!-- Data Analyst -->
-    <div class="section-label" style="margin-top: 40px;">📊 Data Analyst Projects</div>
+    <div class="section-label" style="margin-top: 40px;">Data Analyst Projects</div>
     <div class="projects-grid">
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">📁</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">Data Portfolio Collection</div>
             <span class="project-tier tier-da">Data Analyst</span>
@@ -333,13 +324,13 @@
           <span class="tech">Seaborn</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/fathih-data-portfolio" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/fathih-data-portfolio" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">🚲</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">Bike Sharing Dashboard</div>
             <span class="project-tier tier-da">Data Analyst</span>
@@ -354,13 +345,13 @@
           <span class="tech">Matplotlib</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/Bike-Sharing-dashboard" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/Bike-Sharing-dashboard" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">🛒</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">Brazilian E-Commerce Analysis</div>
             <span class="project-tier tier-da">Data Analyst</span>
@@ -375,13 +366,13 @@
           <span class="tech">Seaborn</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/Brazillian-E-Commerce" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/Brazillian-E-Commerce" target="_blank">GitHub</a>
         </div>
       </div>
 
       <div class="project-card">
         <div class="project-header">
-          <div class="project-icon">🔍</div>
+          <div class="project-icon"></div>
           <div>
             <div class="project-title">Dataset Detective</div>
             <span class="project-tier tier-da">Data Analyst</span>
@@ -396,7 +387,7 @@
           <span class="tech">NumPy</span>
         </div>
         <div class="project-links">
-          <a class="btn btn-primary" href="https://github.com/FathihAkbar/dataset-detective" target="_blank">🐙 GitHub</a>
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/dataset-detective" target="_blank">GitHub</a>
         </div>
       </div>
 
@@ -406,7 +397,7 @@
 </main>
 
 <footer>
-  <p>Built with ❤️ by Fathih Akbar · 2026</p>
+  <p>by Fathih Akbar · 2026</p>
   <p style="margin-top:8px"><a href="https://github.com/FathihAkbar">github.com/FathihAkbar</a></p>
 </footer>
 
