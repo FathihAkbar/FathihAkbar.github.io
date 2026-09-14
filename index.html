@@ -6,173 +6,74 @@
   <title>Fathih Akbar — AI Engineer Portfolio</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #0d1117;
-      color: #e6edf3;
-      line-height: 1.6;
-    }
-
+    body { font-family: 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.6; }
     a { color: #58a6ff; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    /* ── Header ── */
     header {
       background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%);
       border-bottom: 1px solid #21262d;
       padding: 60px 20px;
       text-align: center;
     }
-
     .avatar {
-      width: 100px; height: 100px;
-      border-radius: 50%;
+      width: 100px; height: 100px; border-radius: 50%;
       background: linear-gradient(135deg, #58a6ff, #7c3aed);
       display: flex; align-items: center; justify-content: center;
-      font-size: 40px;
-      margin: 0 auto 20px;
+      font-size: 40px; margin: 0 auto 20px;
     }
-
     header h1 { font-size: 2.2rem; margin-bottom: 8px; }
-    header p.tagline {
-      color: #8b949e;
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-    }
-
+    header p.tagline { color: #8b949e; font-size: 1.1rem; margin-bottom: 20px; }
     .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-    .badge {
-      background: #21262d;
-      border: 1px solid #30363d;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      color: #8b949e;
-    }
-
+    .badge { background: #21262d; border: 1px solid #30363d; padding: 6px 14px; border-radius: 20px; font-size: 13px; color: #8b949e; }
     .social-links { margin-top: 20px; display: flex; gap: 16px; justify-content: center; }
-    .social-links a {
-      background: #21262d;
-      border: 1px solid #30363d;
-      padding: 8px 18px;
-      border-radius: 8px;
-      font-size: 14px;
-      color: #e6edf3;
-      transition: background 0.2s;
-    }
+    .social-links a { background: #21262d; border: 1px solid #30363d; padding: 8px 18px; border-radius: 8px; font-size: 14px; color: #e6edf3; transition: background 0.2s; }
     .social-links a:hover { background: #30363d; text-decoration: none; }
 
-    /* ── Main ── */
     main { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-
     section { margin-bottom: 60px; }
-    section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 24px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #21262d;
-      color: #e6edf3;
-    }
+    section h2 { font-size: 1.5rem; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #21262d; }
 
-    /* ── About ── */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .stat-card { background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 24px; text-align: center; }
+    .stat-number { font-size: 2rem; font-weight: 700; color: #58a6ff; }
+    .stat-label { color: #8b949e; font-size: 14px; margin-top: 4px; }
+
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-    .about-card {
-      background: #161b22;
-      border: 1px solid #21262d;
-      border-radius: 12px;
-      padding: 24px;
-    }
+    .about-card { background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 24px; }
     .about-card h3 { font-size: 14px; color: #8b949e; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px; }
     .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .skill-tag {
-      background: #1f2937;
-      border: 1px solid #374151;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 13px;
-      color: #93c5fd;
-    }
+    .skill-tag { background: #1f2937; border: 1px solid #374151; padding: 4px 12px; border-radius: 20px; font-size: 13px; color: #93c5fd; }
 
-    /* ── Projects ── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 20px;
+    .section-label {
+      font-size: 12px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: .08em; color: #8b949e;
+      margin-bottom: 16px; margin-top: 32px;
+      display: flex; align-items: center; gap: 8px;
     }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: #21262d; }
 
-    .project-card {
-      background: #161b22;
-      border: 1px solid #21262d;
-      border-radius: 12px;
-      padding: 24px;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .project-card:hover {
-      border-color: #58a6ff;
-      transform: translateY(-2px);
-    }
-
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    .project-card { background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 24px; transition: border-color 0.2s, transform 0.2s; }
+    .project-card:hover { border-color: #58a6ff; transform: translateY(-2px); }
     .project-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
     .project-icon { font-size: 28px; }
     .project-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
-    .project-tier {
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 20px;
-      font-weight: 500;
-    }
+    .project-tier { font-size: 11px; padding: 2px 8px; border-radius: 20px; font-weight: 500; }
     .tier-1 { background: #1e1b4b; color: #a5b4fc; }
     .tier-2 { background: #022c22; color: #6ee7b7; }
     .tier-3 { background: #1c1917; color: #d6d3d1; }
-
+    .tier-da { background: #1c1207; color: #fbbf24; }
     .project-desc { color: #8b949e; font-size: 14px; margin-bottom: 16px; line-height: 1.6; }
-
     .tech-stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-    .tech {
-      background: #0d1117;
-      border: 1px solid #30363d;
-      padding: 3px 10px;
-      border-radius: 6px;
-      font-size: 12px;
-      color: #8b949e;
-    }
-
+    .tech { background: #0d1117; border: 1px solid #30363d; padding: 3px 10px; border-radius: 6px; font-size: 12px; color: #8b949e; }
     .project-links { display: flex; gap: 10px; }
-    .btn {
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 13px;
-      border: 1px solid #30363d;
-      color: #e6edf3;
-      background: #21262d;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
+    .btn { padding: 6px 14px; border-radius: 6px; font-size: 13px; border: 1px solid #30363d; color: #e6edf3; background: #21262d; transition: background 0.2s; }
     .btn:hover { background: #30363d; text-decoration: none; }
     .btn-primary { background: #1f6feb; border-color: #1f6feb; }
     .btn-primary:hover { background: #388bfd; }
 
-    /* ── Stats ── */
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .stat-card {
-      background: #161b22;
-      border: 1px solid #21262d;
-      border-radius: 12px;
-      padding: 24px;
-      text-align: center;
-    }
-    .stat-number { font-size: 2rem; font-weight: 700; color: #58a6ff; }
-    .stat-label { color: #8b949e; font-size: 14px; margin-top: 4px; }
-
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid #21262d;
-      padding: 30px 20px;
-      text-align: center;
-      color: #8b949e;
-      font-size: 14px;
-    }
+    footer { border-top: 1px solid #21262d; padding: 30px 20px; text-align: center; color: #8b949e; font-size: 14px; }
 
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; }
@@ -183,11 +84,10 @@
 </head>
 <body>
 
-<!-- ── Header ── -->
 <header>
   <div class="avatar">🤖</div>
   <h1>Fathih Akbar</h1>
-  <p class="tagline">AI Engineer · LLM · NLP · MLOps</p>
+  <p class="tagline">AI Engineer · Data Scientist · LLM · NLP · MLOps</p>
   <div class="badges">
     <span class="badge">🎓 Fresh Graduate</span>
     <span class="badge">📍 Indonesia</span>
@@ -202,12 +102,12 @@
 
 <main>
 
-  <!-- ── Stats ── -->
+  <!-- Stats -->
   <section>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">7</div>
-        <div class="stat-label">Proyek Selesai</div>
+        <div class="stat-number">11+</div>
+        <div class="stat-label">Total Proyek</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">88%</div>
@@ -224,7 +124,7 @@
     </div>
   </section>
 
-  <!-- ── About ── -->
+  <!-- About -->
   <section>
     <h2>👋 Tentang Saya</h2>
     <div class="about-grid">
@@ -254,15 +154,19 @@
           <span class="skill-tag">Fine-tuning</span>
           <span class="skill-tag">MLOps</span>
           <span class="skill-tag">AI Agents</span>
+          <span class="skill-tag">Data Analysis</span>
           <span class="skill-tag">LLM Evaluation</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Projects ── -->
+  <!-- Projects -->
   <section>
     <h2>🚀 Proyek</h2>
+
+    <!-- AI Engineer -->
+    <div class="section-label">🤖 AI Engineer Projects</div>
     <div class="projects-grid">
 
       <div class="project-card">
@@ -300,7 +204,6 @@
           <span class="tech">LoRA/PEFT</span>
           <span class="tech">IndoBERT</span>
           <span class="tech">PyTorch</span>
-          <span class="tech">W&B</span>
         </div>
         <div class="project-links">
           <a class="btn btn-primary" href="https://github.com/FathihAkbar/indobert-sentiment-finetuning" target="_blank">🐙 GitHub</a>
@@ -321,7 +224,6 @@
           <span class="tech">Docker</span>
           <span class="tech">GitHub Actions</span>
           <span class="tech">Pytest</span>
-          <span class="tech">DistilBERT</span>
         </div>
         <div class="project-links">
           <a class="btn btn-primary" href="https://github.com/FathihAkbar/ml-cicd-pipeline" target="_blank">🐙 GitHub</a>
@@ -342,7 +244,6 @@
           <span class="tech">DistilBERT</span>
           <span class="tech">LDA</span>
           <span class="tech">Plotly</span>
-          <span class="tech">WordCloud</span>
         </div>
         <div class="project-links">
           <a class="btn btn-primary" href="https://github.com/FathihAkbar/nlp-dashboard" target="_blank">🐙 GitHub</a>
@@ -363,7 +264,6 @@
           <span class="tech">Gemini</span>
           <span class="tech">Tool Calling</span>
           <span class="tech">FastAPI</span>
-          <span class="tech">Pandas</span>
         </div>
         <div class="project-links">
           <a class="btn btn-primary" href="https://github.com/FathihAkbar/ai-agent" target="_blank">🐙 GitHub</a>
@@ -384,7 +284,6 @@
           <span class="tech">Pydantic</span>
           <span class="tech">FastAPI</span>
           <span class="tech">PyMuPDF</span>
-          <span class="tech">LangChain</span>
         </div>
         <div class="project-links">
           <a class="btn btn-primary" href="https://github.com/FathihAkbar/structured-extraction" target="_blank">🐙 GitHub</a>
@@ -405,10 +304,99 @@
           <span class="tech">Gemini</span>
           <span class="tech">Plotly</span>
           <span class="tech">LangChain</span>
-          <span class="tech">Pandas</span>
         </div>
         <div class="project-links">
           <a class="btn btn-primary" href="https://github.com/FathihAkbar/llm-eval-dashboard" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Data Analyst -->
+    <div class="section-label" style="margin-top: 40px;">📊 Data Analyst Projects</div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">📁</div>
+          <div>
+            <div class="project-title">Data Portfolio Collection</div>
+            <span class="project-tier tier-da">Data Analyst</span>
+          </div>
+        </div>
+        <p class="project-desc">Kumpulan 20+ proyek data analyst dan data scientist — mencakup EDA, machine learning, visualisasi, dan statistical analysis dari berbagai domain dan dataset.</p>
+        <div class="tech-stack">
+          <span class="tech">Python</span>
+          <span class="tech">Pandas</span>
+          <span class="tech">Scikit-learn</span>
+          <span class="tech">Matplotlib</span>
+          <span class="tech">Seaborn</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/fathih-data-portfolio" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">🚲</div>
+          <div>
+            <div class="project-title">Bike Sharing Dashboard</div>
+            <span class="project-tier tier-da">Data Analyst</span>
+          </div>
+        </div>
+        <p class="project-desc">Dashboard visualisasi data bike sharing dari program bootcamp. Analisis pola penggunaan sepeda berdasarkan waktu, cuaca, dan musim menggunakan visualisasi interaktif.</p>
+        <div class="tech-stack">
+          <span class="tech">Python</span>
+          <span class="tech">Pandas</span>
+          <span class="tech">Streamlit</span>
+          <span class="tech">Plotly</span>
+          <span class="tech">Matplotlib</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/Bike-Sharing-dashboard" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">🛒</div>
+          <div>
+            <div class="project-title">Brazilian E-Commerce Analysis</div>
+            <span class="project-tier tier-da">Data Analyst</span>
+          </div>
+        </div>
+        <p class="project-desc">Analisis dataset e-commerce Brazil (Olist) — eksplorasi pola penjualan, performa seller, kepuasan pelanggan, dan tren produk menggunakan visualisasi interaktif.</p>
+        <div class="tech-stack">
+          <span class="tech">Python</span>
+          <span class="tech">Pandas</span>
+          <span class="tech">Streamlit</span>
+          <span class="tech">Plotly</span>
+          <span class="tech">Seaborn</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/Brazillian-E-Commerce" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-icon">🔍</div>
+          <div>
+            <div class="project-title">Dataset Detective</div>
+            <span class="project-tier tier-da">Data Analyst</span>
+          </div>
+        </div>
+        <p class="project-desc">Tools untuk evaluasi kualitas dataset secara otomatis — deteksi duplikat, missing values, outlier, distribusi data, dan rekomendasi preprocessing dalam satu tool.</p>
+        <div class="tech-stack">
+          <span class="tech">Python</span>
+          <span class="tech">Pandas</span>
+          <span class="tech">Streamlit</span>
+          <span class="tech">Plotly</span>
+          <span class="tech">NumPy</span>
+        </div>
+        <div class="project-links">
+          <a class="btn btn-primary" href="https://github.com/FathihAkbar/dataset-detective" target="_blank">🐙 GitHub</a>
         </div>
       </div>
 
